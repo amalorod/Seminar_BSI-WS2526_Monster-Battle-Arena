@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Monster Battle Arena</title>
+        
+    <link rel="stylesheet" href="css/index_style.css">
+    <script src="js/index.js" defer></script> 
+    <script src="js/battle.js" defer></script>
+    <script src="js/customMonster.js" defer></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css" />
+      <link href="https://fonts.cdnfonts.com/css/ancient" rel="stylesheet">
+      <link href="./css/style-main.css" rel="stylesheet">
+      <link href="./css/modals.css" rel="stylesheet">
+        
+    </head>
+    <body>
+    
+    
+    <h1 id="uebers">Monster Battle Arena</h1>
+     
+      
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        
+      <p> Trage jetzt deine Daten ein, dann kanns losgehen...</p>
+    
+    <div class="container">
+      
+      
+      <div class="flexbox">
+        <p><label for="fname">Dein Vorname:</label></p>
+        <input type="text" oninput="this.value = this.value.replace(/[^a-zA-ZäöüÄÖÜß\s\-]/g, '')" id="fname" name="fname" /><br /><br />
+        <p><label for="lname">Dein Nachname:</label></p>
+        <input type="text" oninput="this.value = this.value.replace(/[^a-zA-ZäöüÄÖÜß\s\-]/g, '')" id="lname" name="lname" /><br /><br />
+        <p><label for="fname"> Deine E-Mail:</label></p>
+        <input type="email" id="name" /> <br />
+        <br />
+        <p><label for="fname"> Dein Alter:</label></p>
+        <input type="number" id="alter" min="1"/> <br />
+        <br />
+      </div>
+
+      
+
+      <div class="flexbox">
+        <p>Möchtest du ein Testament hinterlassen bevor es losgeht?</p>
+        <textarea
+          id="eigeneMeinung"
+          name="meinung"
+          rows="4"
+          cols="50"></textarea>
+        <br />
+      </div>
+
+      
+          
+          
+          
+          
+
+        
+        </div>
+          <button onclick="closeModal()" class ="button1">Mit diesen Daten fortfahren</button>
+      </div>
+        
+    </div>
+      
+      
+      
+      
+      
+      
+     
+      
+      
+
+      
+
+      <!-- Inhalt der Arena-->
+       <div id="viewfield">
+
+      <div id="arena">
+
+        
+
+        <div class="arena-wrapper"> 
+
+        <div id="monsterpic">
+
+        <img id="monster1" title="Gorgo" onclick="showMonsters()" class="monster" src="./img/gorgo.png" alt="Monster 1" width="150px" height="100px" />
+        <img id="monster2" title="Kral"class="monster" onclick="showMonsters()" src="./img/Kral.png" alt="Monster 2" width="150px" height="100px"  />
+        <img id="monster3" title="Hydra" class="monster" onclick="showMonsters()" src="./img/Hydra.png" alt="Monster 3" width="150px" height="100px"  />
+        <img id="monster4" title="Zeys" class="monster"  onclick="showMonsters()"src="./img/Zeys.png" alt="Monster 4" width="100px" height="150px"  />
+
+      </div>  
+
+      
+
+
+      <div id="monsterpicattack">
+
+        
+        <img id="monster1a" class="monster2" src="./img/gorgo.png" alt="Monster 1" width="150px" height="100px" />
+        <img id="monster2a" class="monster2" src="./img/Kral.png" alt="Monster 2" width="150px" height="100px"  />
+        <img id="monster3a" class="monster2" src="./img/Hydra.png" alt="Monster 3" width="150px" height="100px"  />
+        <img id="monster4a" class="monster2" src="./img/Zeys.png" alt="Monster 4" width="100px" height="150px"  />
+
+      </div>  
+
+
+      </div>
+        
+
+
+      </div>
+      
+
+      <div id="ArenaModal">
+
+
+        <div id="Ergebnisse"> </div>
+        
+
+
+      </div>
+
+      <div id="eingabeInfo">
+
+
+
+        <div id="userdata"></div>
+
+
+
+        <div id="menu"> 
+        <p>Menu:</p>
+        <button class="btn" onclick="resetFight()">Kampf stoppen</button> <br>
+        <button class="btn" onclick="showCustom()">Eigene Monster erstellen</button> <br>
+        <button class="btn" onclick="loadPage()">Neustart</button>
+        
+        </div>
+
+
+
+
+        
+
+
+
+
+      <div id="score">
+
+      <p>Highscore:</p>
+      <div id="ausgabeSieger"></div>
+    
+
+
+      </div>
+
+
+
+      
+
+
+    </div>
+       
+
+
+
+          <div id="customModal">
+        <!-- Modal content -->
+        <div class="modal-content-custom">
+          <span onclick="closeCustom()" class="close">&times;</span>
+
+        <div id="cMcolumn">
+
+  <div class="customize-row">
+    <div class="img-wrapper">
+       <img class="customMonster" src="./img/gorgo.png" width="150" />
+    </div>
+    <div class="stats-container">
+       <div class="input-group">
+          <label>Name:</label>
+          <input type="text" id="name-0" placeholder="">
+       </div>
+       <div class="input-group">
+          <label>Angriff:</label>
+          <input type="range" id="atk-0" min="0" max="300" step="1" value="0">
+          <span class="slider-value">0</span>
+       </div>
+       <div class="input-group">
+           <label>HP:</label>
+           <input type="range" id="hp-0" min="0" max="300" step="1" value="0">
+           <span class="slider-value">0</span>
+       </div>
+       <div class="input-group">
+           <label>Verteidigung:</label>
+           <input type="range" id="def-0" min="0" max="300" step="1" value="0">
+           <span class="slider-value">0</span>
+       </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="customize-row">
+    <div class="img-wrapper">
+       <img class="customMonster" src="./img/Kral.png" width="150" />
+    </div>
+    <div class="stats-container">
+       <div class="input-group">
+          <label>Name:</label>
+          <input type="text" id="name-1" placeholder="">
+       </div>
+       <div class="input-group">
+          <label>Angriff:</label>
+          <input type="range" id="atk-1" min="0" max="300" step="1" value="0">
+          <span class="slider-value">0</span>
+       </div>
+       <div class="input-group">
+           <label>HP:</label>
+           <input type="range" id="hp-1" min="0" max="300" step="1" value="0">
+           <span class="slider-value">0</span>
+       </div>
+       <div class="input-group">
+           <label>Verteidigung:</label>
+           <input type="range" id="def-1" min="0" max="300" step="1" value="0">
+           <span class="slider-value">0</span>
+       </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="customize-row">
+    <div class="img-wrapper">
+       <img class="customMonster" src="./img/Hydra.png" width="150" />
+    </div>
+    <div class="stats-container">
+       <div class="input-group">
+          <label>Name:</label>
+          <input type="text" id="name-2" placeholder="">
+       </div>
+       <div class="input-group">
+          <label>Angriff:</label>
+          <input type="range" id="atk-2" min="0" max="300" step="1" value="0">
+          <span class="slider-value">0</span>
+       </div>
+       <div class="input-group">
+           <label>HP:</label>
+           <input type="range" id="hp-2" min="0" max="300" step="1" value="0">
+           <span class="slider-value">0</span>
+       </div>
+       <div class="input-group">
+           <label>Verteidigung:</label>
+           <input type="range" id="def-2" min="0" max="300" step="1" value="0">
+           <span class="slider-value">0</span>
+       </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="customize-row">
+    <div class="img-wrapper">
+       <img class="customMonster" src="./img/Zeys.png" width="100" />
+    </div>
+    <div class="stats-container">
+       <div class="input-group">
+          <label>Name:</label>
+          <input type="text" id="name-3" placeholder="">
+       </div>
+       <div class="input-group">
+          <label>Angriff:</label>
+          <input type="range" id="atk-3" min="0" max="300" step="1" value="0">
+          <span class="slider-value">0</span>
+       </div>
+       <div class="input-group">
+           <label>HP:</label>
+           <input type="range" id="hp-3" min="0" max="300" step="1" value="0">
+           <span class="slider-value">0</span>
+       </div>
+       <div class="input-group">
+           <label>Verteidigung:</label>
+           <input type="range" id="def-3" min="0" max="300" step="1" value="0">
+           <span class="slider-value">0</span>
+       </div>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 20px;">
+      <button class="button1" onclick="saveAllMonsters()">Änderungen Speichern</button>
+  </div>
+
+</div>
+      
+    </div>
+      
+      </div>
+      
+     
+
+
+      
+      
+      
+      
+      
+      
+      
+      
+    
+      
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>
