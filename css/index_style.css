@@ -1,0 +1,78 @@
+@import url('https://fonts.cdnfonts.com/css/ancient');
+
+body {
+  background-image: url(../img/digital-art-style-theatre-stage.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#uebers {text-align: center;
+      color: white;
+  font-family: 'Ancient', sans-serif;
+  font-size: 80px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+h6 {
+  font-family: Orbitron, sans-serif;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 120%;
+}
+
+p {text-align: center;}
+
+
+
+
+
+
+
+
+
+#Seitenrand1 {
+  height: 380px;
+  width: 280px;
+  right: 20px;
+  position: fixed;
+  z-index: -1;
+}
+
+#Seitenrand2 {
+  height: 380px;
+  width: 280px;
+  position: fixed;
+  z-index: -1;
+
+  left: 20px;
+}
+
+a {
+  border-color: rgb(0, 0, 0);
+  border-width: 5px;
+  border-radius: 0px;
+  border-style: solid;
+  padding: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 20px;
+
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.w3-bar-item {
+  margin: 0;
+}

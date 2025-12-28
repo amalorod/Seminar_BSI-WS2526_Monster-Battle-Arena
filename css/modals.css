@@ -1,0 +1,259 @@
+/* gehört zum ersten Modal */
+
+.flexbox {
+  background-color: rgba(233, 151, 88, 0.5);
+  opacity: 90%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0);
+  border-width: 4px;
+  margin: 20px;
+  border-radius: 8px;
+  padding: 30px;
+  width: auto;
+  height: auto;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+
+  align-content: center;
+
+  justify-content: center;
+  width: auto;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.button1 {
+  border-color: rgb(0, 0, 0);
+  border-width: 5px;
+  border-radius: 10px;
+  border-style: solid;
+  padding: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.button1:hover {
+  cursor: default;
+  padding: 7px;
+  transition-duration: 0.5s;
+  font-size: 25px;
+  background-color: rgb(113, 66, 0);
+  color: white;
+}
+
+textarea {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  width: auto;
+  
+}
+
+/* The Modal (background) */
+.modal {
+  
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(62, 62, 62, 0.58);
+  background-color: rgba(0, 0, 0, 0.18); 
+  border-radius: 10px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 3% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+  border-radius: 10px;
+  
+
+  font-size: 20px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+select {
+  background-color: white;
+  border-radius: 10px;
+  height: 40px;
+
+  font-size: 20px;
+}
+
+input {
+  background-color: white;
+  border-radius: 10px;
+  height: 20px;
+
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* gehört zum 2. Modal */
+
+#cMcolumn {
+
+display: flex;
+flex-direction: column;
+
+}
+
+.modal-content-custom {
+
+  
+  background-color: #fefefe;
+  margin: 3% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  border-radius: 10px;
+  
+  max-height: 90vh; 
+  overflow-y: auto;
+  font-size: 20px;
+}
+
+
+#customModal {
+
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(62, 62, 62, 0.58); 
+  background-color: rgba(0, 0, 0, 0.18); 
+  border-radius: 10px;
+           
+  justify-content: center; 
+  align-items: center;
+
+}
+
+.zModalSchrift {
+
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Eine Zeile pro Monster */
+.customize-row {
+    display: flex;             
+    align-items: center;       
+    gap: 30px;                 
+    padding: 20px 0;
+    width: 100%;
+}
+
+
+.img-wrapper {
+    flex: 0 0 160px; 
+    text-align: center;
+}
+
+/* Einstellen der stats */
+.stats-container {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+    margin-right: 50px;
+    
+}
+
+
+.input-group {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+ font-weight: bold;
+    width: 150px;       
+    text-align: left;   
+    margin-right: 10px; 
+    flex-shrink: 0;
+}
+
+.input-group input[type="range"] {
+    width: 500px;
+    cursor: pointer;
+}
+
+
+
+.input-group input {
+    width: 60%; 
+}
+
+
+
+
+.slider-value {
+    font-weight: bold;
+    margin-left: 10px; 
+    width: 30px;       
+    text-align: right;
+}
+
+
+
+
+#fname1 {
+
+width: 500px;
+
+}
