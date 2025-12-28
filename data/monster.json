@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Gorgo",
+    "strength": 10,
+    "verteidigung": "Holzlatte",
+    "hp": 80,
+    "defenseval": 1
+  },
+  {
+    "name": "Kral",
+    "strength": 20,
+    "verteidigung": "Magnetfeld",
+    "hp": 50,
+    "defenseval": 2
+  },
+  {
+    "name": "Hydra",
+    "strength": 30,
+    "verteidigung": "Wasserbarriere",
+    "hp": 25,
+    "defenseval": 3
+  },
+  {
+    "name": "Zeys",
+    "strength": 40,
+    "verteidigung": "Blitzwand",
+    "hp": 15,
+    "defenseval": 4
+  }
+]
